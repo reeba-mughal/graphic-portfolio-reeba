@@ -96,7 +96,7 @@ footer {
 }
 .main-nav a:hover { transform: translateY(-2px); }
 
-/* BRAND PAGE - Logos ke liye alag design */
+/* BRAND PAGE */
 .brand-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -115,17 +115,6 @@ footer {
   flex: none !important;
 }
 
-@media (max-width: 768px) {
-  .brand-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-/* LOGO PAGE - Aapke theme ke liye fixed */
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -151,7 +140,7 @@ footer {
   width: 100%;
   height: 280px;
   object-fit: contain;
-  background: #fff; /* Logo white pe hi acha lagega */
+  background: #fff;
   padding: 25px;
   display: block;
 }
@@ -164,4 +153,24 @@ footer {
   color: #aaa;
   font-size: 0.9em;
   margin-top: 5px;
+}
+
+/* ===== MOBILE FIX  ===== */
+@media (max-width: 768px) {
+  header { padding: 30px 15px; }
+  header h1 { font-size: 1.8em; }
+  header p { font-size: 1em; }
+  .main-nav { flex-wrap: wrap; gap:10px; }
+  .main-nav a { padding: 8px 18px; font-size: 14px; }
+  section { padding: 30px 15px; }
+  .grid, .logo-grid { grid-template-columns: 1fr !important; gap:20px; padding: 0 10px; }
+  .brand-grid { grid-template-columns: 1fr !important; }
+  .card { aspect-ratio: 9/16; }
+  .brand-grid .card img, .brand-grid .card video, .logo-card img { height: 220px !important; }
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.5em; }
+  .main-nav a { width: 100%; text-align:center; }
+  .card h3 { font-size: 1em; min-height: 50px; }
 }
